@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Test cases for User Login
 
-Resource    ../resources/base.resource
+Resource    ../resources/Base.resource
 
 Test Teardown    Take Screenshot
 
