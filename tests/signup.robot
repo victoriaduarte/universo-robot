@@ -62,6 +62,11 @@ Name field should be required
     ...    ${element}    
     ...    visible    5  
 
+    Get Text       
+    ...    css=#signup .notice    
+    ...    equal    
+    ...    Por favor informe o seu nome completo
+
 Email field should be required
     [Tags]    required
     New Browser    browser=chromium
@@ -84,6 +89,11 @@ Email field should be required
     ...    ${element}    
     ...    visible    5  
 
+    Get Text       
+    ...    css=#signup .notice    
+    ...    equal    
+    ...    Por favor, informe o seu melhor e-mail
+    
 Document field should be required
     [Tags]    required
     New Browser    browser=chromium
@@ -105,3 +115,8 @@ Document field should be required
     Wait For Elements State    
     ...    ${element}    
     ...    visible    5  
+
+    Get Text       
+    ...    css=#signup .notice    
+    ...    equal    
+    ...    Por favor, informe o seu CPF
