@@ -1,4 +1,18 @@
 *** Settings ***
 Documentation    Main file of the project
 
+Library    Browser
+
 Library    libs/Account.py
+
+Resource    pages/Landing.resource
+
+*** Keywords ***
+Start session
+    New Browser    browser=chromium
+    New Page       http://localhost:3000/
+
+    Get Text       
+    ...    css=#signup h2    
+    ...    equal    
+    ...    Faça seu cadastro e venha para a Smartbit!

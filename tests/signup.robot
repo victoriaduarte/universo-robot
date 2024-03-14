@@ -1,8 +1,6 @@
 *** Settings ***
 Documentation    Test cases for User Login
 
-Library    Browser
-
 Resource    ../resources/base.resource
 
 Test Teardown    Take Screenshot
@@ -12,19 +10,8 @@ Start the user registration
 
     ${account}     Get Fake Account
 
-    New Browser    browser=chromium
-    New Page       http://localhost:3000/
-
-    Get Text       
-    ...    css=#signup h2    
-    ...    equal    
-    ...    Faça seu cadastro e venha para a Smartbit!
-    
-    Fill Text      css=#name         ${account}[name]
-    Fill Text      css=#email        ${account}[email]
-    Fill Text      css=#cpf          ${account}[cpf]
-    
-    Click          css=button >> text=Cadastrar    
+    Start session
+    Sumbit signup form    ${account}
 
     # Assertion
     ${element}    Set Variable    css=h2 >> text="Falta pouco para fazer parte da família Smartbit!"
@@ -42,137 +29,65 @@ Start the user registration
 
 Name field should be required
     [Tags]    required
-    New Browser    browser=chromium
-    New Page       http://localhost:3000/
 
-    Get Text       
-    ...    css=#signup h2    
-    ...    equal    
-    ...    Faça seu cadastro e venha para a Smartbit!
-    
-    Fill Text      css=#email       victoria@email.com
-    Fill Text      css=#cpf         39831866029
-    
-    Click          css=button >> text=Cadastrar    
+    ${account}    Create Dictionary
+    ...    name=${EMPTY}
+    ...    email=victoria@email.com
+    ...    cpf=39831866029
 
-    # Assertion
-    ${element}    Set Variable    css=#signup .notice >> text="Por favor informe o seu nome completo"
+    Start session
+    Sumbit signup form    ${account}
 
-    Wait For Elements State    
-    ...    ${element}    
-    ...    visible    5  
-
-    Get Text       
-    ...    css=#signup .notice    
-    ...    equal    
-    ...    Por favor informe o seu nome completo
+    Notice should be    Por favor informe o seu nome completo
 
 Email field should be required
     [Tags]    required
-    New Browser    browser=chromium
-    New Page       http://localhost:3000/
 
-    Get Text       
-    ...    css=#signup h2    
-    ...    equal    
-    ...    Faça seu cadastro e venha para a Smartbit!
-    
-    Fill Text      css=#name        Victória Duarte
-    Fill Text      css=#cpf         39831866029
-    
-    Click          css=button >> text=Cadastrar    
+    ${account}    Create Dictionary
+    ...    name=Victória Duarte
+    ...    email=${EMPTY}
+    ...    cpf=39831866029
 
-    # Assertion
-    ${element}    Set Variable    css=#signup .notice >> text="Por favor, informe o seu melhor e-mail"
+    Start session
+    Sumbit signup form    ${account}
 
-    Wait For Elements State    
-    ...    ${element}    
-    ...    visible    5  
-
-    Get Text       
-    ...    css=#signup .notice    
-    ...    equal    
-    ...    Por favor, informe o seu melhor e-mail
+    Notice should be    Por favor, informe o seu melhor e-mail
     
 Document field should be required
     [Tags]    required
-    New Browser    browser=chromium
-    New Page       http://localhost:3000/
 
-    Get Text       
-    ...    css=#signup h2    
-    ...    equal    
-    ...    Faça seu cadastro e venha para a Smartbit!
-    
-    Fill Text      css=#name        Victória Duarte
-    Fill Text      css=#email       victoria@email.com
-    
-    Click          css=button >> text=Cadastrar    
+    ${account}    Create Dictionary
+    ...    name=Victória Duarte
+    ...    email=victoria@email.com
+    ...    cpf=${EMPTY}
 
-    # Assertion
-    ${element}    Set Variable    css=#signup .notice >> text="Por favor, informe o seu CPF"
+    Start session
+    Sumbit signup form    ${account}
 
-    Wait For Elements State    
-    ...    ${element}    
-    ...    visible    5  
-
-    Get Text       
-    ...    css=#signup .notice    
-    ...    equal    
-    ...    Por favor, informe o seu CPF
+    Notice should be    Por favor, informe o seu CPF
 
 Invalid email
     [Tags]    invalid
-    New Browser    browser=chromium
-    New Page       http://localhost:3000/
 
-    Get Text       
-    ...    css=#signup h2    
-    ...    equal    
-    ...    Faça seu cadastro e venha para a Smartbit!
-    
-    Fill Text      css=#name        Victória Duarte
-    Fill Text      css=#email       victoria*gmail.com
-    Fill Text      css=#cpf         39831866029
-    
-    Click          css=button >> text=Cadastrar    
+    ${account}    Create Dictionary
+    ...    name=Victória Duarte
+    ...    email=victoria*email.com
+    ...    cpf=39831866029
 
-    # Assertion
-    ${element}    Set Variable    css=#signup .notice >> text="Oops! O email informado é inválido"
+    Start session
+    Sumbit signup form    ${account}
 
-    Wait For Elements State    
-    ...    ${element}    
-    ...    visible    5  
- 
-    Get Text       
-    ...    css=#signup .notice    
-    ...    equal    
-    ...    Oops! O email informado é inválido
+    Notice should be    Oops! O email informado é inválido
     
 Invalid CPF
     [Tags]    invalid
-    New Browser    browser=chromium
-    New Page       http://localhost:3000/
 
-    Get Text       
-    ...    css=#signup h2    
-    ...    equal    
-    ...    Faça seu cadastro e venha para a Smartbit!
-    
-    Fill Text      css=#name        Victória Duarte
-    Fill Text      css=#email       victoria@gmail.com
-    Fill Text      css=#cpf         3983186602a
-    
-    Click          css=button >> text=Cadastrar    
+    ${account}    Create Dictionary
+    ...    name=Victória Duarte
+    ...    email=victoria@email.com
+    ...    cpf=3983186602a
 
-    # Assertion
-    ${element}    Set Variable    css=#signup .notice >> text="Oops! O CPF informado é inválido"
+    Start session
+    Sumbit signup form    ${account}
 
-    Wait For Elements State    
-    ...    ${element}    
-    ...    visible    5  
- 
-    Get Text       
-    ...    css=#signup .notice    
-    ...    equal    
-    ...    Oops! O CPF informado é inválido
+    Notice should be    Oops! O CPF informado é inválido
