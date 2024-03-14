@@ -22,7 +22,7 @@ Start the user registration
     
     Fill Text      css=#name         ${account}[name]
     Fill Text      css=#email        ${account}[email]
-    Fill Text      css=#document    ${account}[document]
+    Fill Text      css=#cpf          ${account}[cpf]
     
     Click          css=button >> text=Cadastrar    
 
@@ -51,7 +51,7 @@ Name field should be required
     ...    Faça seu cadastro e venha para a Smartbit!
     
     Fill Text      css=#email       victoria@email.com
-    Fill Text      css=#document    39831866029
+    Fill Text      css=#cpf         39831866029
     
     Click          css=button >> text=Cadastrar    
 
@@ -78,7 +78,7 @@ Email field should be required
     ...    Faça seu cadastro e venha para a Smartbit!
     
     Fill Text      css=#name        Victória Duarte
-    Fill Text      css=#document    39831866029
+    Fill Text      css=#cpf         39831866029
     
     Click          css=button >> text=Cadastrar    
 
@@ -133,7 +133,7 @@ Invalid email
     
     Fill Text      css=#name        Victória Duarte
     Fill Text      css=#email       victoria*gmail.com
-    Fill Text      css=#document    39831866029
+    Fill Text      css=#cpf         39831866029
     
     Click          css=button >> text=Cadastrar    
 
@@ -161,7 +161,7 @@ Invalid CPF
     
     Fill Text      css=#name        Victória Duarte
     Fill Text      css=#email       victoria@gmail.com
-    Fill Text      css=#document    3983186602a
+    Fill Text      css=#cpf         3983186602a
     
     Click          css=button >> text=Cadastrar    
 
