@@ -13,17 +13,7 @@ Start the user registration
     Start session
     Sumbit signup form    ${account}
 
-    # Assertion
-    ${element}    Set Variable    css=h2 >> text="Falta pouco para fazer parte da família Smartbit!"
-
-    Wait For Elements State    
-    ...    ${element}    
-    ...    visible    5  
-
-    Get Text                   
-    ...    ${element}    
-    ...    equal      
-    ...    Falta pouco para fazer parte da família Smartbit!
+    Verify welcome message    Falta pouco para fazer parte da família Smartbit!
 
     Get Url    equal     http://localhost:3000/welcome
 
