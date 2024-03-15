@@ -3,6 +3,7 @@ Documentation    Test cases for User Login
 
 Resource    ../resources/Base.resource
 
+Test Setup       Start session
 Test Teardown    Take Screenshot
 
 *** Test Cases ***
@@ -10,7 +11,6 @@ Start the user registration
 
     ${account}     Get Fake Account
 
-    Start session
     Sumbit signup form    ${account}
 
     Verify welcome message    Falta pouco para fazer parte da família Smartbit!
@@ -25,7 +25,6 @@ Name field should be required
     ...    email=victoria@email.com
     ...    cpf=39831866029
 
-    Start session
     Sumbit signup form    ${account}
 
     Notice should be    Por favor informe o seu nome completo
@@ -38,7 +37,6 @@ Email field should be required
     ...    email=${EMPTY}
     ...    cpf=39831866029
 
-    Start session
     Sumbit signup form    ${account}
 
     Notice should be    Por favor, informe o seu melhor e-mail
@@ -51,7 +49,6 @@ Document field should be required
     ...    email=victoria@email.com
     ...    cpf=${EMPTY}
 
-    Start session
     Sumbit signup form    ${account}
 
     Notice should be    Por favor, informe o seu CPF
@@ -64,7 +61,6 @@ Invalid email
     ...    email=victoria*email.com
     ...    cpf=39831866029
 
-    Start session
     Sumbit signup form    ${account}
 
     Notice should be    Oops! O email informado é inválido
@@ -77,7 +73,6 @@ Invalid CPF
     ...    email=victoria@email.com
     ...    cpf=3983186602a
 
-    Start session
     Sumbit signup form    ${account}
 
     Notice should be    Oops! O CPF informado é inválido
