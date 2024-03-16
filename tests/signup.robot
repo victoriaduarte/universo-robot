@@ -57,29 +57,29 @@ Document field should be required
 
     Notice should be    Por favor, informe o seu CPF
 
-Invalid email
-    [Tags]    invalid
+# Invalid email
+#     [Tags]    invalid
 
-    ${account}    Create Dictionary
-    ...    name=Victória Duarte
-    ...    email=victoria*email.com
-    ...    cpf=39831866029
+#     ${account}    Create Dictionary
+#     ...    name=Victória Duarte
+#     ...    email=victoria*email.com
+#     ...    cpf=39831866029
 
-    Sumbit signup form    ${account}
+#     Sumbit signup form    ${account}
 
-    Notice should be    Oops! O email informado é inválido
+#     Notice should be    Oops! O email informado é inválido
     
-Invalid CPF
-    [Tags]    invalid
+# Invalid CPF
+#     [Tags]    invalid
 
-    ${account}    Create Dictionary
-    ...    name=Victória Duarte
-    ...    email=victoria@email.com
-    ...    cpf=3983186602a
+#     ${account}    Create Dictionary
+#     ...    name=Victória Duarte
+#     ...    email=victoria@email.com
+#     ...    cpf=3983186602a
 
-    Sumbit signup form    ${account}
+#     Sumbit signup form    ${account}
 
-    Notice should be    Oops! O CPF informado é inválido
+#     Notice should be    Oops! O CPF informado é inválido
 
 Duplicate email
     [Tags]    duplicate
@@ -117,26 +117,26 @@ Duplicate cpf
 
     Alert should be    O CPF fornecido já foi cadastrado!
 
-# Signup attempt
-#     [Template]    Attempt signup
-#     # Empty
-#     ${EMPTY}           victoria@email.com    39831866029     Por favor informe o seu nome completo
-#     Victória Duarte    ${EMPTY}              39831866029     Por favor, informe o seu melhor e-mail
-#     Victória Duarte    victoria@email.com    ${EMPTY}        Por favor, informe o seu CPF
-#     # Invalid Email
-#     Victória Duarte    victoria*email.com    39831866029     Oops! O email informado é inválido
-#     Victória Duarte    victoria&email.com    39831866029     Oops! O email informado é inválido
-#     Victória Duarte    www.test.com          39831866029     Oops! O email informado é inválido
-#     Victória Duarte    ASDFGHJKL             39831866029     Oops! O email informado é inválido
-#     Victória Duarte    123456789             39831866029     Oops! O email informado é inválido
-#     Victória Duarte    %^&*                  39831866029     Oops! O email informado é inválido
-#     # Invalid CPF
-#     Victória Duarte    victoria@email.com    3983186602a     Oops! O CPF informado é inválido
-#     Victória Duarte    victoria@email.com    39831866111     Oops! O CPF informado é inválido
-#     Victória Duarte    victoria@email.com    3983186602      Oops! O CPF informado é inválido
-#     Victória Duarte    victoria@email.com    1               Oops! O CPF informado é inválido
-#     Victória Duarte    victoria@email.com    ASDFGHJKL       Oops! O CPF informado é inválido
-#     Victória Duarte    victoria@email.com    %^&*            Oops! O CPF informado é inválido
+Signup attempt
+    [Template]    Attempt signup
+    # Empty
+    ${EMPTY}           victoria@email.com    39831866029     Por favor informe o seu nome completo
+    Victória Duarte    ${EMPTY}              39831866029     Por favor, informe o seu melhor e-mail
+    Victória Duarte    victoria@email.com    ${EMPTY}        Por favor, informe o seu CPF
+    # Invalid Email
+    Victória Duarte    victoria*email.com    39831866029     Oops! O email informado é inválido
+    Victória Duarte    victoria&email.com    39831866029     Oops! O email informado é inválido
+    Victória Duarte    www.test.com          39831866029     Oops! O email informado é inválido
+    Victória Duarte    ASDFGHJKL             39831866029     Oops! O email informado é inválido
+    Victória Duarte    123456789             39831866029     Oops! O email informado é inválido
+    Victória Duarte    %^&*                  39831866029     Oops! O email informado é inválido
+    # Invalid CPF
+    Victória Duarte    victoria@email.com    3983186602a     Oops! O CPF informado é inválido
+    Victória Duarte    victoria@email.com    39831866111     Oops! O CPF informado é inválido
+    Victória Duarte    victoria@email.com    3983186602      Oops! O CPF informado é inválido
+    Victória Duarte    victoria@email.com    1               Oops! O CPF informado é inválido
+    Victória Duarte    victoria@email.com    ASDFGHJKL       Oops! O CPF informado é inválido
+    Victória Duarte    victoria@email.com    %^&*            Oops! O CPF informado é inválido
 
 *** Keywords ***
 Attempt signup
