@@ -12,6 +12,7 @@ Resource    pages/Welcome.resource
 *** Keywords ***
 Start session
     New Browser    browser=chromium
+    New Context    viewport={'width': 1920, 'height': 1080}
     New Page       http://localhost:3000/
 
     Get Text       
