@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Test cases for User Login
+Documentation    Test cases for User Signup
 
 Resource    ../resources/Base.resource
 
