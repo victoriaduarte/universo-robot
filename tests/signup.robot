@@ -97,7 +97,7 @@ Duplicate email
     
     Sumbit signup form    ${account}
 
-    Alert should be    O e-mail fornecido já foi cadastrado!
+    Toast should be    O e-mail fornecido já foi cadastrado!
 
 Duplicate cpf
     [Tags]    duplicate
@@ -115,7 +115,7 @@ Duplicate cpf
     
     Sumbit signup form    ${account}
 
-    Alert should be    O CPF fornecido já foi cadastrado!
+    Toast should be    O CPF fornecido já foi cadastrado!
 
 Signup attempt
     [Template]    Attempt signup
