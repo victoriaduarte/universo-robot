@@ -3,17 +3,17 @@ Documentation    Test cases for User Signup
 
 Resource    ../resources/Base.resource
 
-Test Setup    Run Keywords
-...    Start session
-...    AND    Connect To Database    psycopg2	oesjjtik	oesjjtik	y36aoG9PAdC7zngIzNCWtztI_o1iscI9	kesavan.db.elephantsql.com	5432	
-Test Teardown    Run Keywords
-...    Take Screenshot
-...    Disconnect From All Databases
+Test Setup       Start session
+Test Teardown    Take Screenshot
 
 *** Test Cases ***
 Start the user registration
-
-    ${account}     Get Fake Account
+    ${account}    Create Dictionary
+    ...    name=Victória Duarte
+    ...    email=victoria@email.com
+    ...    cpf=91046719025
+ 
+    Delete Account By Email    ${account}[email]
 
     Sumbit signup form    ${account}
 
@@ -84,16 +84,13 @@ Document field should be required
 Duplicate email
     [Tags]    duplicate
 
-    ${duplicate_email}    Set Variable    duplicate@email.com
-
-    Execute SQL String     DELETE FROM accounts WHERE email = '${duplicate_email}';
-
-    Execute SQL String     INSERT INTO accounts (email, name, cpf) VALUES ('${duplicate_email}','Joao da Silva','45461090915');
-
     ${account}    Create Dictionary
     ...    name=Victória Duarte
-    ...    email=${duplicate_email}
+    ...    email=duplicate@email.com
     ...    cpf=39831866029
+
+    Delete Account By Email    ${account}[email]
+    Insert Account             ${account} 
     
     Sumbit signup form    ${account}
 
@@ -102,17 +99,20 @@ Duplicate email
 Duplicate cpf
     [Tags]    duplicate
 
-    ${duplicate_cpf}    Set Variable    45461090915
-
-    Execute SQL String     DELETE FROM accounts WHERE cpf = '${duplicate_cpf}';
-
-    Execute SQL String     INSERT INTO accounts (email, name, cpf) VALUES ('duplicate@cpf.com','Joao da Silva','${duplicate_cpf}');
-    
     ${account}    Create Dictionary
     ...    name=Victória Duarte
     ...    email=victoria@email.com
-    ...    cpf=${duplicate_cpf}
+    ...    cpf=39831866029
+ 
+    Delete Account By Email    ${account}[email]
+    Insert Account             ${account} 
     
+    # Account with the same cpf
+    ${account}    Create Dictionary
+    ...    name=Victória Duarte
+    ...    email=victoria@email.com.br
+    ...    cpf=39831866029
+
     Sumbit signup form    ${account}
 
     Toast should be    O CPF fornecido já foi cadastrado!

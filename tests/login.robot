@@ -7,7 +7,6 @@ Resource    ../resources/pages/components/Toast.resource
 Test Setup       Start session
 Test Teardown    Take Screenshot
 
-
 *** Test Cases ***
 Login as gym admin
     Go to login page
