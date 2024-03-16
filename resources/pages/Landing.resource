@@ -12,17 +12,3 @@ Sumbit signup form
     Fill Text      css=#cpf          ${account}[cpf]
     
     Click          css=button >> text=Cadastrar    
-
-Notice should be
-    [Arguments]    ${expected_text}
-
-    ${element}    Set Variable    css=#signup .notice
-
-    Wait For Elements State    
-    ...    ${element}    
-    ...    visible    5  
- 
-    Get Text       
-    ...    ${element}  
-    ...    equal    
-    ...    ${expected_text}
