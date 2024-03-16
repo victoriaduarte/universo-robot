@@ -2,7 +2,6 @@
 Documentation    Test cases for User Login
 
 Resource    ../resources/Base.resource
-Resource    ../resources/pages/components/Toast.resource
 
 Test Setup       Start session
 Test Teardown    Take Screenshot
