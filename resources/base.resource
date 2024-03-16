@@ -2,6 +2,7 @@
 Documentation    Main file of the project
 
 Library    Browser
+Library    DatabaseLibrary
 
 Library    libs/Account.py
 

@@ -3,8 +3,12 @@ Documentation    Test cases for User Login
 
 Resource    ../resources/Base.resource
 
-Test Setup       Start session
-Test Teardown    Take Screenshot
+Test Setup    Run Keywords
+...    Start session
+...    AND    Connect To Database    psycopg2	oesjjtik	oesjjtik	y36aoG9PAdC7zngIzNCWtztI_o1iscI9	kesavan.db.elephantsql.com	5432	
+Test Teardown    Run Keywords
+...    Take Screenshot
+...    Disconnect From All Databases
 
 *** Test Cases ***
 Start the user registration
@@ -76,6 +80,42 @@ Invalid CPF
     Sumbit signup form    ${account}
 
     Notice should be    Oops! O CPF informado é inválido
+
+Duplicate email
+    [Tags]    duplicate
+
+    ${duplicate_email}    Set Variable    duplicate@email.com
+
+    Execute SQL String     DELETE FROM accounts WHERE email = '${duplicate_email}';
+
+    Execute SQL String     INSERT INTO accounts (email, name, cpf) VALUES ('${duplicate_email}','Joao da Silva','45461090915');
+
+    ${account}    Create Dictionary
+    ...    name=Victória Duarte
+    ...    email=${duplicate_email}
+    ...    cpf=39831866029
+    
+    Sumbit signup form    ${account}
+
+    Alert should be    O e-mail fornecido já foi cadastrado!
+
+Duplicate cpf
+    [Tags]    duplicate
+
+    ${duplicate_cpf}    Set Variable    45461090915
+
+    Execute SQL String     DELETE FROM accounts WHERE cpf = '${duplicate_cpf}';
+
+    Execute SQL String     INSERT INTO accounts (email, name, cpf) VALUES ('duplicate@cpf.com','Joao da Silva','${duplicate_cpf}');
+    
+    ${account}    Create Dictionary
+    ...    name=Victória Duarte
+    ...    email=victoria@email.com
+    ...    cpf=${duplicate_cpf}
+    
+    Sumbit signup form    ${account}
+
+    Alert should be    O CPF fornecido já foi cadastrado!
 
 # Signup attempt
 #     [Template]    Attempt signup
