@@ -11,6 +11,7 @@ Resource    pages/Landing.resource
 Resource    pages/Welcome.resource
 Resource    pages/Login.resource
 Resource    pages/Accounts.resource
+Resource    pages/Memberships.resource
 
 Resource    pages/components/Toast.resource
 Resource    pages/components/BoxNotice.resource

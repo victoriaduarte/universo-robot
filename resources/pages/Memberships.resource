@@ -1,0 +1,28 @@
+*** Settings ***
+Documentation    Memberships page elements and actions
+
+Library    Browser
+
+*** Keywords ***
+Go to memberships form
+    Click    a[href="/memberships/new"]
+
+    Wait For Elements State    css=h1 >> text=Nova matrícula    visible    5  
+
+Select account
+    [Arguments]    ${name}    ${cpf}    
+    Fill Text     css=input[aria-label=select_account]    ${name}
+    Click         css=[data-testid="${cpf}"]
+
+Select plan
+    [Arguments]    ${plan}
+    Fill Text     css=input[aria-label="select_plan"]    ${plan}
+    Click         css=div[class$=option] >> text=${plan}
+
+Fill credit card information
+    [Arguments]    ${card}
+    Fill Text     css=input[name=card_number]    ${card}[number]
+    Fill Text     css=input[name=card_holder]    ${card}[holder]
+    Fill Text     css=input[name=card_month]     ${card}[month] 
+    Fill Text     css=input[name=card_year]      ${card}[year]  
+    Fill Text     css=input[name=card_cvv]       ${card}[cvv]   
