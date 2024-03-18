@@ -1,0 +1,17 @@
+{
+    "create": {
+        "account": {
+            "name": "Uchiha Itachi",
+            "email": "uchiha@itachi.com",
+            "cpf": "23573428037"
+        },
+        "plan": "Plano Black",
+        "credit_card": {
+            "number": "4242424242424242",
+            "holder": "Uchiha Itachi",
+            "month": "12",
+            "year": "2030",
+            "cvv": "123"
+        }
+    }
+}

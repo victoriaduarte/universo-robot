@@ -26,6 +26,8 @@ def delete_account_by_email(email):
 def insert_account(account):
     print(f"Inserting account: {account}")
 
-    query = f"INSERT INTO accounts (email, name, cpf) VALUES ('{account.email}','{account.name}','{account.cpf}');"
+    query = f"""
+    INSERT INTO accounts (email, name, cpf) 
+    VALUES ('{account["email"]}','{account["name"]}','{account["cpf"]}');"""
 
     execute(query)

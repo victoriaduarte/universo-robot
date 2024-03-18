@@ -3,6 +3,7 @@ Documentation    Main file of the project
 
 Library    Browser
 Library    DatabaseLibrary
+Library    JSONLibrary
 
 Library    libs/Account.py
 Library    libs/Database.py
@@ -26,3 +27,12 @@ Start session
     ...    css=#signup h2    
     ...    equal    
     ...    Faça seu cadastro e venha para a Smartbit!
+ 
+Get JSON fixture
+    [Arguments]    ${file_name}    ${scenario}
+
+    ${data}    Load Json From File    
+    ...    ${EXECDIR}/resources/fixtures/${file_name}.json
+    ...    encoding=utf-8
+
+    RETURN    ${data}[${scenario}]

@@ -9,22 +9,13 @@ Test Teardown    Take Screenshot
 *** Test Cases ***
 Enroll an user
 
-    ${account}    Create Dictionary
-    ...    name=Uchiha Itachi
-    ...    email=uchiha@itachi.com
-    ...    cpf=23573428037
+    ${data}    Get JSON fixture    memberships    create
 
-    ${plan}    Set Variable    Plano Black
-    
-    ${credit_card}    Create Dictionary
-    ...    number=4242424242424242
-    ...    holder=${account}[name]
-    ...    month=12
-    ...    year=2030
-    ...    cvv=123
+    Log    ${data}
+    Log    ${data}[account]
 
-    Delete Account By Email    ${account}[email]
-    Insert Account             ${account} 
+    Delete Account By Email    ${data}[account][email]
+    Insert Account             ${data}[account] 
 
     Go to login page
     Sumbit login form    sac@smartbit.com    pwd123
@@ -33,9 +24,9 @@ Enroll an user
     Go to memberships page
     Go to memberships form
 
-    Select account    ${account}[name]    ${account}[cpf]
-    Select plan       ${plan}
-    Fill credit card information    ${credit_card}     
+    Select account    ${data}[account][name]    ${data}[account][cpf]
+    Select plan       ${data}[plan]
+    Fill credit card information    ${data}[credit_card]    
 
     Click    button[type=submit] >> text=Cadastrar
 
