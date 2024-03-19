@@ -11,23 +11,11 @@ Enroll an user
 
     ${data}    Get JSON fixture    memberships    create
 
-    Log    ${data}
-    Log    ${data}[account]
-
     Delete Account By Email    ${data}[account][email]
     Insert Account             ${data}[account] 
 
-    Go to login page
-    Sumbit login form    sac@smartbit.com    pwd123
-    User is logged in    sac@smartbit.com
-
+    Sign in as admin
     Go to memberships page
-    Go to memberships form
-
-    Select account    ${data}[account][name]    ${data}[account][cpf]
-    Select plan       ${data}[plan]
-    Fill credit card information    ${data}[credit_card]    
-
-    Click    button[type=submit] >> text=Cadastrar
+    Create new membership    ${data}
 
     Toast should be    Matrícula cadastrada com sucesso.

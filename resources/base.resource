@@ -14,8 +14,14 @@ Resource    pages/Login.resource
 Resource    pages/Accounts.resource
 Resource    pages/Memberships.resource
 
+Resource    pages/components/Navbar.resource
 Resource    pages/components/Toast.resource
 Resource    pages/components/BoxNotice.resource
+
+
+*** Variables ***
+${ADMIN_EMAIL}           sac@smartbit.com
+${ADMIN_PASS}            pwd123
 
 *** Keywords ***
 Start session
@@ -36,3 +42,9 @@ Get JSON fixture
     ...    encoding=utf-8
 
     RETURN    ${data}[${scenario}]
+
+Sign in as admin
+    Go to login page
+    Sumbit login form    ${ADMIN_EMAIL}    ${ADMIN_PASS}
+    User is logged in    ${ADMIN_EMAIL}
+    

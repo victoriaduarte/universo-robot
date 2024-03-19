@@ -4,6 +4,16 @@ Documentation    Memberships page elements and actions
 Library    Browser
 
 *** Keywords ***
+Create new membership
+    [Arguments]    ${data}
+
+    Go to memberships form
+    Select account                  ${data}[account][name]    ${data}[account][cpf]
+    Select plan                     ${data}[plan]
+    Fill credit card information    ${data}[credit_card]    
+
+    Click    button[type=submit] >> text=Cadastrar
+
 Go to memberships form
     Click    a[href="/memberships/new"]
 
