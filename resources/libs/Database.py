@@ -2,10 +2,10 @@ import psycopg2
 
 # connection as string: dbname / as object: database
 db_conn = """
-    host='kesavan.db.elephantsql.com'
-    dbname='oesjjtik'
-    user='oesjjtik'
-    password='y36aoG9PAdC7zngIzNCWtztI_o1iscI9'
+    host='localhost'
+    dbname='smartbit'
+    user='postgres'
+    password='QAx@123'
 """
 
 def execute(query):
