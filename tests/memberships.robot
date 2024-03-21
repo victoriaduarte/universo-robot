@@ -43,3 +43,19 @@ Search by name
     Go to memberships page
     Search by name    ${data}[account][name]
     Filter by name    ${data}[account][name]
+
+Delete by name
+    [Tags]    delete
+
+    ${data}    Get JSON fixture    memberships    delete
+
+    Insert membership    ${data}  
+
+    Sign in as admin
+    Go to memberships page
+
+    Delete by name    ${data}[account][name]
+    Confirm delete
+    
+    Membership should not be visible    ${data}[account][name]
+    Toast should be    Matrícula removida com sucesso.

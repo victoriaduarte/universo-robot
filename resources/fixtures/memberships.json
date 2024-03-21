@@ -36,8 +36,7 @@
             "year": "2030",
             "cvv": "123"
         }
-    }
-    ,
+    },
     "search": {
         "account": {
             "name": "Rock Lee",
@@ -52,6 +51,25 @@
         "credit_card": {
             "number": "4242424242424242",
             "holder": "Rock Lee",
+            "month": "12",
+            "year": "2030",
+            "cvv": "123"
+        }
+    },
+    "delete": {
+        "account": {
+            "name": "Hyuuga Hinata",
+            "email": "hyuuga@hinata.com",
+            "cpf": "15430139025"
+        },
+        "plan": {
+            "name": "Plano Black",
+            "id": "2",
+            "price": 79.99
+        },
+        "credit_card": {
+            "number": "4242424242424242",
+            "holder": "Hyuuga Hinata",
             "month": "12",
             "year": "2030",
             "cvv": "123"
