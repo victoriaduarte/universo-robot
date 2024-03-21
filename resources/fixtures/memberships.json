@@ -37,4 +37,24 @@
             "cvv": "123"
         }
     }
+    ,
+    "search": {
+        "account": {
+            "name": "Rock Lee",
+            "email": "rock@lee.com",
+            "cpf": "24660166058"
+        },
+        "plan": {
+            "name": "Plano Smart",
+            "id": "1",
+            "price": 99.99
+        },
+        "credit_card": {
+            "number": "4242424242424242",
+            "holder": "Rock Lee",
+            "month": "12",
+            "year": "2030",
+            "cvv": "123"
+        }
+    }
 }

@@ -36,3 +36,16 @@ Fill credit card information
     Fill Text     css=input[name=card_month]     ${card}[month] 
     Fill Text     css=input[name=card_year]      ${card}[year]  
     Fill Text     css=input[name=card_cvv]       ${card}[cvv]   
+
+Search by name
+    [Arguments]    ${name}
+    Fill Text    css=input[placeholder="Busque por nome"]    ${name}
+
+    Wait For Elements State    css= strong >> text=Total: 1
+    ...    visible    5   
+
+Filter by name
+    [Arguments]    ${name}
+
+    Wait For Elements State    css= table tbody tr >> text=${name}
+    ...    visible    5   
