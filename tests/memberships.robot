@@ -19,3 +19,15 @@ Enroll an user
     Create new membership    ${data}
 
     Toast should be    Matrícula cadastrada com sucesso.
+
+Should not create duplicate membership
+    [Tags]    dup
+    ${data}    Get JSON fixture    memberships    duplicate
+
+    Insert membership    ${data}  
+
+    Sign in as admin
+    Go to memberships page
+    Create new membership    ${data}
+
+    Toast should be    O usuário já possui matrícula.

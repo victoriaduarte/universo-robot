@@ -5,10 +5,33 @@
             "email": "uchiha@itachi.com",
             "cpf": "23573428037"
         },
-        "plan": "Plano Black",
+        "plan": {
+            "name": "Plano Black",
+            "id": "2",
+            "price": 79.99
+        },
         "credit_card": {
             "number": "4242424242424242",
             "holder": "Uchiha Itachi",
+            "month": "12",
+            "year": "2030",
+            "cvv": "123"
+        }
+    },
+    "duplicate": {
+        "account": {
+            "name": "Nara Shikamaru",
+            "email": "nara@shikamaru.com",
+            "cpf": "12364237041"
+        },
+        "plan": {
+            "name": "Plano Smart",
+            "id": "1",
+            "price": 99.99
+        },
+        "credit_card": {
+            "number": "4242424242424242",
+            "holder": "Nara Shikamaru",
             "month": "12",
             "year": "2030",
             "cvv": "123"
