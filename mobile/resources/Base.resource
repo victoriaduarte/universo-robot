@@ -3,6 +3,11 @@ Documentation    Main file of mobile test automation project
 
 Library    AppiumLibrary
 
+Resource    ./actions/account.resource
+Resource    ./actions/login.resource
+Resource    ./actions/menu.resource
+Resource    ./actions/mybody.resource
+
 *** Keywords ***
 Start session
     
