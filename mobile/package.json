@@ -1,0 +1,18 @@
+{
+  "name": "mobile",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victoria Duarte",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "appium": "^2.5.1",
+    "appium-doctor": "^1.16.2"
+  },
+  "devDependencies": {
+    "appium-uiautomator2-driver": "^3.0.4"
+  }
+}
