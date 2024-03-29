@@ -7,6 +7,7 @@ Resource    ./actions/account.resource
 Resource    ./actions/login.resource
 Resource    ./actions/menu.resource
 Resource    ./actions/mybody.resource
+Resource    ./actions/popup.resource
 
 *** Keywords ***
 Start session
