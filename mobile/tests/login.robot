@@ -12,6 +12,7 @@ Login with cpf and ip
     Sign in with cpf    00000014141
     User is logged in
 
-Login with invalid cpf
+Login with unregistered cpf
+
     Sign in with cpf    48487877001
     Popup should have text     Acesso não autorizado! Entre em contato com a central de atendimento
