@@ -11,3 +11,4 @@ Popup should have text
     ${element}    Set Variable    xpath=//android.widget.TextView[@resource-id="android:id/message"]
 
     Wait Until Element Is Visible    ${element}    10
+    Element Text Should Be           ${element}    ${text}
