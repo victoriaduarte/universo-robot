@@ -2,7 +2,6 @@
 Documentation    Login screen actions
 
 Library    AppiumLibrary
-Library    ../libs/Ip.py
 
 *** Keywords ***
 Sign in with cpf

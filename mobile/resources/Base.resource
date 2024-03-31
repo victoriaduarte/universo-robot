@@ -3,6 +3,9 @@ Documentation    Main file of mobile test automation project
 
 Library    AppiumLibrary
 
+Library    ../../libs/Database.py
+Library    ../../libs/Ip.py
+
 Resource    ./actions/account.resource
 Resource    ./actions/login.resource
 Resource    ./actions/mybody.resource
