@@ -2,6 +2,7 @@
 Documentation    Main file of mobile test automation project
 
 Library    AppiumLibrary
+Library    JSONLibrary
 
 Library    ../../libs/Database.py
 Library    ../../libs/Ip.py
@@ -29,3 +30,12 @@ Finish session
 
     Capture Page Screenshot
     Close Application
+
+Get JSON fixture
+    [Arguments]    ${scenario}
+
+    ${data}    Load Json From File    
+    ...    ${EXECDIR}/resources/fixtures/data.json
+    ...    encoding=utf-8
+
+    RETURN    ${data}[${scenario}]

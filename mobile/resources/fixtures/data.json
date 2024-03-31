@@ -1,0 +1,21 @@
+{
+    "login": {
+        "account": {
+            "name": "Haruno Sakura",
+            "email": "haruo@sakura.com",
+            "cpf": "07048055022"
+        },
+        "plan": {
+            "name": "Plano Black",
+            "id": "2",
+            "price": 79.99
+        },
+        "credit_card": {
+            "number": "4242424242424242",
+            "holder": "Haruno Sakura",
+            "month": "12",
+            "year": "2030",
+            "cvv": "123"
+        }
+    }
+}

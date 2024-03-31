@@ -9,7 +9,11 @@ Test Teardown    Finish session
 *** Test Cases ***
 Login with cpf and ip
     
-    Sign in with cpf    00000014141
+    ${data}     Get JSON fixture    login
+    
+    Insert membership    ${data}  
+
+    Sign in with cpf     ${data}[account][cpf]
     User is logged in
 
 Login with unregistered cpf
