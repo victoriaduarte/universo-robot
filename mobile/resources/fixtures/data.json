@@ -17,5 +17,26 @@
             "year": "2030",
             "cvv": "123"
         }
+    },
+    "update": {
+        "account": {
+            "name": "Sarutobi Asuma",
+            "email": "sarutobi@asuma.com",
+            "cpf": "54071883090",
+            "weight": 55,
+            "height": 165
+        },
+        "plan": {
+            "name": "Plano Black",
+            "id": "2",
+            "price": 79.99
+        },
+        "credit_card": {
+            "number": "4242424242424242",
+            "holder": "Sarutobi Asuma",
+            "month": "12",
+            "year": "2030",
+            "cvv": "123"
+        }
     }
 }

@@ -7,6 +7,8 @@ Library    JSONLibrary
 Library    ../../libs/Database.py
 Library    ../../libs/Ip.py
 
+Resource    ../../services/Service.resource
+
 Resource    ./actions/account.resource
 Resource    ./actions/login.resource
 Resource    ./actions/mybody.resource

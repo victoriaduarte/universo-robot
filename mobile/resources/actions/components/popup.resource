@@ -1,7 +1,6 @@
 *** Settings ***
-Documentation    Alert component actions
+Documentation    Popup component actions
 
-Library    Browser
 Library    AppiumLibrary
 
 *** Keywords ***
