@@ -1,6 +1,8 @@
 *** Settings ***
 Documentation    Main file of the project
 
+Variables  Env.py
+
 Library    Browser
 Library    DatabaseLibrary
 Library    JSONLibrary
@@ -26,9 +28,9 @@ ${ADMIN_PASS}            pwd123
 
 *** Keywords ***
 Start session
-    New Browser    browser=chromium
+    New Browser    browser=${BROWSER}    headless=${HEADLESS}
     New Context    viewport={'width': 1920, 'height': 1080}
-    New Page       http://localhost:3000/
+    New Page       ${BASE_URL}
 
     Get Text       
     ...    css=#signup h2    

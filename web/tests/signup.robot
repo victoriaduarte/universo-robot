@@ -1,6 +1,8 @@
 *** Settings ***
 Documentation    Test cases for User Signup
 
+Variables   ../resources/Env.py
+
 Resource    ../resources/Base.resource
 
 Test Setup       Start session
@@ -19,7 +21,7 @@ Start the user registration
 
     Verify welcome message    Falta pouco para fazer parte da família Smartbit!
 
-    Get Url    equal     http://localhost:3000/welcome
+    Get Url    equal     ${BASE_URL}/welcome
 
 Name field should be required
     [Tags]    required

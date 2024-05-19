@@ -1,11 +1,13 @@
 *** Settings ***
 Documentation    Login page elements and actions
 
+Variables  ../Env.py
+
 Library    Browser
 
 *** Keywords ***
 Go to login page
-    Go To    http://localhost:3000/login
+    Go To    ${BASE_URL}/login
 
 Sumbit login form
     [Arguments]    ${email}    ${password}

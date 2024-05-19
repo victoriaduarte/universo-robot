@@ -1,7 +1,8 @@
 *** Settings ***
-Documentation    todo
+Documentation    API integration layer
 
 Library    RequestsLibrary
+Variables  Env.py
 
 *** Keywords ***
 Set user token
@@ -10,7 +11,7 @@ Set user token
     ...    password=pwd123
 
     ${response}    POST    
-    ...    url=http://localhost:3333/sessions    
+    ...    url=${API_URL}/sessions    
     ...    json=${payload}    
     ...    expected_status=200
     
@@ -28,7 +29,7 @@ Get account by name
     ...    name=${name}
 
     ${response}    GET    
-    ...    url=http://localhost:3333/accounts    
+    ...    url=${API_URL}/accounts    
     ...    headers=${headers}    
     ...    params=${params}    
     ...    expected_status=200    
