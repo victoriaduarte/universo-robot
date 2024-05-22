@@ -1,6 +1,6 @@
 # universo-robot
  
-Automated tests for a Gym web and mobile application using Robot Framework and Appium.
+Automated tests for web and mobile (Android) application using Robot Framework and Appium.
 
 ## 📚 Course
 [Universo Robot Framework - Udemy](https://www.udemy.com/course/universo-robot-framework/)
@@ -20,19 +20,18 @@ Automated tests for a Gym web and mobile application using Robot Framework and A
 - Cross-browser testing
 - Enviroment variables with python-dotenv
 
----
 
 ## 🌐 Application
-Smartbit is a fictitious gym application where the client starts their registration on the web application and visit the nearest branch to finish the membership process. On the native mobile app (Android), they can manage their account, register their body measurements, check their BMI (IMC) and cancel their gym membership.
+Smartbit is a fictitious gym application where the client starts their registration on the web application and visit the nearest branch to finish the membership process. On the native mobile app (Android) they can manage their account, register their body measurements, check their BMI (IMC) and cancel their gym membership.
 
 The gym administrator uses the web application to complete the client registration, manage the clients and their memberships.
 
 
 *Mobile application*
-<img src="app-screenshots/mobile-login.png" width=150px> <img src="app-screenshots/mobile-myaccount.png" width=150px> <img src="app-screenshots/mobile-mybody.png" width=150px>
+<br><img src="app-screenshots/mobile-login.png" width=150px> <img src="app-screenshots/mobile-myaccount.png" width=150px> <img src="app-screenshots/mobile-mybody.png" width=150px>
 
 *Web application*
-<img src="app-screenshots/web-signup.png" width=320px> <img src="app-screenshots/web-signupform.png" width=320px> <img src="app-screenshots/web-loginadmin.png" width=320px>
+<br><img src="app-screenshots/web-signup.png" width=320px> <img src="app-screenshots/web-signupform.png" width=320px> <img src="app-screenshots/web-loginadmin.png" width=320px>
 <img src="app-screenshots/web-clients.png" width=320px> <img src="app-screenshots/web-enrolls.png" width=320px> <img src="app-screenshots/web-newenroll.png" width=320px>
 
 ## 🧪 Test cases
