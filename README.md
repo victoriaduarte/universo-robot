@@ -35,7 +35,80 @@ The gym administrator uses the web application to complete the client registrati
 <img src="app-screenshots/web-clients.png" width=320px> <img src="app-screenshots/web-enrolls.png" width=320px> <img src="app-screenshots/web-newenroll.png" width=320px>
 
 ## 🧪 Test cases
-todo
+<details>
+<summary><strong>Client login</strong></summary>
+
+| Test Case | Status | Application |
+|---|---|---|
+|Login with cpf and ip       | ✅ | Mobile |
+|Login with unregistered cpf | ✅ | Mobile |   
+|Login with invalid cpf      | ✅ | Mobile |
+
+</details>
+
+<details>
+<summary><strong>Client measurements</strong></summary>
+
+| Test Case | Status | Application |
+|---|---|---|
+|Register my measures               | ✅ | Mobile |
+|Should not register empty measures | 🚧 | Mobile |   
+
+</details>
+
+<details>
+<summary><strong>Admin login</strong></summary>
+
+| Test Case | Status | Application |
+|---|---|---|
+|Login as gym admin                         | ✅ | Web | 
+|Login as gym admin with invalid password   | ✅ | Web |  
+|Login as gym admin with unregistered email | ✅ | Web |
+|Login with invalid credentials             | ✅ | Web |
+
+</details>
+
+<details>
+<summary><strong>Client signup</strong></summary>
+
+| Test Case | Status | Application |
+|---|---|---|
+|Start the user registration       | ✅ | Web |  
+|Name field should be required     | ✅ | Web |
+|Email field should be required    | ✅ | Web | 
+|Document field should be required | ✅ | Web |
+|Duplicate email                   | ✅ | Web |  
+|Duplicate cpf                     | ✅ | Web |   
+|Signup with invalid data          | ✅ | Web |   
+
+</details>
+
+<details>
+<summary><strong>Memberships</strong></summary>
+
+| Test Case | Status | Application |
+|---|---|---|
+|Enroll an user                         | ✅ | Web |
+|Should not create duplicate membership | ✅ | Web |   
+|Should not create invalid membership   | 🚧 | Web |   
+|Search not found                       | 🚧 | Web |   
+|Search membership by name              | ✅ | Web |
+|Delete membership by name              | ✅ | Web |
+
+</details>
+
+<details>
+<summary><strong>Clients</strong></summary>
+
+| Test Case | Status | Application |
+|---|---|---|
+|Search not found              | 🚧 | Web |   
+|Search client by name         | 🚧 | Web |
+|Delete client by name         | 🚧 | Web |
+|Edit client with valid data   | 🚧 | Web |
+|Edit client with invalid data | 🚧 | Web |
+
+</details>
 
 ## 💻 Technologies and Tools used
 - **Python**: Programming language used to create custom libraries

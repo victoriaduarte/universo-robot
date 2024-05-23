@@ -32,7 +32,7 @@ Should not create duplicate membership
 
     Toast should be    O usuário já possui matrícula.
 
-Search by name
+Search membership by name
     [Tags]    search
 
     ${data}    Get JSON fixture    memberships    search
@@ -44,7 +44,7 @@ Search by name
     Search by name    ${data}[account][name]
     Filter by name    ${data}[account][name]
 
-Delete by name
+Delete membership by name
     [Tags]    delete
 
     ${data}    Get JSON fixture    memberships    delete

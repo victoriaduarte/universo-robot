@@ -119,7 +119,7 @@ Duplicate cpf
 
     Toast should be    O CPF fornecido já foi cadastrado!
 
-Signup attempt
+Signup with invalid data
     [Template]    Attempt signup
     # Empty
     ${EMPTY}           victoria@email.com    39831866029     Por favor informe o seu nome completo
