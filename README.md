@@ -118,3 +118,11 @@ The gym administrator uses the web application to complete the client registrati
 - **Android Studio**: Run the Android Virtual Device (AVD) emulator 
 - **Appium Inspector**: GUI for inspecting and interacting with the mobile app elements  
 - **Insomnia**: Manual API testing
+
+## Report
+
+*Web test report*
+<img src="app-screenshots/test-report-web.png" width=320px>
+
+*Mobile test report*
+<img src="app-screenshots/test-report-mobile.png" width=320px>
