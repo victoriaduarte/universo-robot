@@ -66,6 +66,7 @@ Delete membership by name
     Sign in as admin
     Go to memberships page
 
+    Search by name    ${data}[account][name]
     Delete by name    ${data}[account][name]
     Confirm delete
     
