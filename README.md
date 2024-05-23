@@ -103,9 +103,9 @@ The gym administrator uses the web application to complete the client registrati
 
 | Test Case | Status | Application |
 |---|---|---|
-|Search not found              | 🚧 | Web |   
-|Search client by name         | 🚧 | Web |
-|Delete client by name         | 🚧 | Web |
+|Search not found              | ✅ | Web |   
+|Search client by name         | ✅ | Web |
+|Delete client by name         | ✅ | Web |
 |Edit client with valid data   | 🚧 | Web |
 |Edit client with invalid data | 🚧 | Web |
 

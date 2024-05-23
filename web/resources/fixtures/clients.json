@@ -1,0 +1,16 @@
+{
+    "search": {
+        "account": {
+            "name": "Yamanaka Ino",
+            "email": "yamanaka@ino.com",
+            "cpf": "82729530053"
+        }
+    },
+    "delete": {
+        "account": {
+            "name": "Yamanaka Sai",
+            "email": "yamanaka@sai.com",
+            "cpf": "90484091018"
+        }
+    }
+}
