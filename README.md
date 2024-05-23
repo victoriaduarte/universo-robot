@@ -122,7 +122,7 @@ The gym administrator uses the web application to complete the client registrati
 ## Report
 
 *Web test report*
-<img src="app-screenshots/test-report-web.png" width=320px>
+<br><img src="app-screenshots/test-report-web.png" width=320px>
 
 *Mobile test report*
-<img src="app-screenshots/test-report-mobile.png" width=320px>
+<br><img src="app-screenshots/test-report-mobile.png" width=320px>
