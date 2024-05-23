@@ -51,8 +51,9 @@ The gym administrator uses the web application to complete the client registrati
 
 | Test Case | Status | Application |
 |---|---|---|
-|Register my measures               | ✅ | Mobile |
-|Should not register empty measures | 🚧 | Mobile |   
+|Register my measures                 | ✅ | Mobile |
+|Should not register empty measures   | 🚧 | Mobile |   
+|Should not register invalid measures | 🚧 | Mobile |   
 
 </details>
 
