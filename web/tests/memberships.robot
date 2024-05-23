@@ -3,6 +3,8 @@ Documentation    Test cases for memberships
 
 Resource    ../resources/Base.resource
 
+Library    String
+
 Test Setup       Start session
 Test Teardown    Take Screenshot
 
@@ -43,6 +45,16 @@ Search membership by name
     Go to memberships page
     Search by name    ${data}[account][name]
     Filter by name    ${data}[account][name]
+
+Search not found
+    [Tags]    search
+
+    ${String}    Generate Random String    length=10    chars=[LETTERS]
+
+    Sign in as admin
+    Go to memberships page
+    Search by name    ${String}
+    No records found
 
 Delete membership by name
     [Tags]    delete

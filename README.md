@@ -92,7 +92,7 @@ The gym administrator uses the web application to complete the client registrati
 |Enroll an user                         | ✅ | Web |
 |Should not create duplicate membership | ✅ | Web |   
 |Should not create invalid membership   | 🚧 | Web |   
-|Search not found                       | 🚧 | Web |   
+|Search not found                       | ✅ | Web |   
 |Search membership by name              | ✅ | Web |
 |Delete membership by name              | ✅ | Web |
 

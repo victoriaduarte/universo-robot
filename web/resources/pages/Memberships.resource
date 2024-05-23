@@ -60,3 +60,7 @@ Membership should not be visible
 
     Wait For Elements State    css= table tbody tr >> text=${name}
     ...    detached    5  
+
+No records found
+    Wait For Elements State    css= div >> text="Nenhum registro encontrado."
+    ...    visible    5   
