@@ -38,5 +38,47 @@
             "year": "2030",
             "cvv": "123"
         }
+    },
+    "empty": {
+        "account": {
+            "name": "Hatake Kakashi",
+            "email": "hatake@kakashi.com",
+            "cpf": "24192915065",
+            "weight": "",
+            "height": ""
+        },
+        "plan": {
+            "name": "Plano Black",
+            "id": "2",
+            "price": 79.99
+        },
+        "credit_card": {
+            "number": "4242424242424242",
+            "holder": "Hatake Kakashi",
+            "month": "12",
+            "year": "2030",
+            "cvv": "123"
+        }
+    },
+    "invalid": {
+        "account": {
+            "name": "Senju Tsunade",
+            "email": "senju@tsunade.com",
+            "cpf": "65197889020",
+            "weight": "*",
+            "height": "."
+        },
+        "plan": {
+            "name": "Plano Black",
+            "id": "2",
+            "price": 79.99
+        },
+        "credit_card": {
+            "number": "4242424242424242",
+            "holder": "Hatake Kakashi",
+            "month": "12",
+            "year": "2030",
+            "cvv": "123"
+        }
     }
 }
